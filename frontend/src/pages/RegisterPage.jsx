@@ -65,7 +65,6 @@ function RegisterPage() {
           width: 400px;
           height: 400px;
           background: radial-gradient(circle, rgba(16,185,129,0.85) 0%, transparent 70%);
-          pointer-events: none;
         }
 
         .auth-left::after {
@@ -76,7 +75,6 @@ function RegisterPage() {
           width: 300px;
           height: 300px;
           background: radial-gradient(circle, rgba(99,102,241,0.85) 0%, transparent 70%);
-          pointer-events: none;
         }
 
         .brand {
@@ -123,8 +121,6 @@ function RegisterPage() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          display: inline-block;
-          padding-bottom: 0.05em;
         }
 
         .left-desc {
@@ -231,7 +227,7 @@ function RegisterPage() {
           border: 1px solid #1f2937;
           border-radius: 10px;
           color: #fff;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.95rem;
           transition: border-color 0.2s, box-shadow 0.2s;
           outline: none;
@@ -267,21 +263,6 @@ function RegisterPage() {
         }
 
         .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-        .login-link {
-          text-align: center;
-          color: #4b5563;
-          font-size: 0.875rem;
-          margin-top: 1.5rem;
-        }
-
-        .login-link a {
-          color: #10b981;
-          text-decoration: none;
-          font-weight: 500;
-        }
-
-        .login-link a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
           .auth-root { grid-template-columns: 1fr; }
@@ -390,11 +371,6 @@ function RegisterPage() {
                                     : 'Create account →'}
                             </button>
                         </form>
-
-                        <p className="login-link">
-                            Already have an account?{' '}
-                            <Link to="/login">Sign in</Link>
-                        </p>
                     </div>
                 </div>
             </div>

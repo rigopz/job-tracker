@@ -42,7 +42,6 @@ function LoginPage() {
           background: #0a0a0f;
         }
 
-        /* LEFT PANEL */
         .auth-left {
           position: relative;
           display: flex;
@@ -61,7 +60,6 @@ function LoginPage() {
           width: 400px;
           height: 400px;
           background: radial-gradient(circle, rgba(99,102,241,0.85) 0%, transparent 70%);
-          pointer-events: none;
         }
 
         .auth-left::after {
@@ -71,8 +69,7 @@ function LoginPage() {
           right: -80px;
           width: 300px;
           height: 300px;
-          background: radial-gradient(circle, rgba(236,72,153,0.85) 10%, transparent 70%);
-          pointer-events: none;
+          background: radial-gradient(circle, rgba(236,72,153,0.85) 0%, transparent 70%);
         }
 
         .brand {
@@ -121,8 +118,6 @@ function LoginPage() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          display: inline-block;
-          padding-bottom: 0.05em;
         }
 
         .left-desc {
@@ -132,7 +127,12 @@ function LoginPage() {
           max-width: 320px;
         }
 
-        /* RIGHT PANEL */
+        .stats-row {
+          display: flex;
+          gap: 2rem;
+          z-index: 1;
+        }
+
         .auth-right {
           display: flex;
           align-items: center;
@@ -206,7 +206,7 @@ function LoginPage() {
           border: 1px solid #1f2937;
           border-radius: 10px;
           color: #fff;
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.95rem;
           transition: border-color 0.2s, box-shadow 0.2s;
           outline: none;
@@ -242,38 +242,6 @@ function LoginPage() {
         }
 
         .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-        .divider {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          margin: 1.5rem 0;
-        }
-
-        .divider-line {
-          flex: 1;
-          height: 1px;
-          background: #1f2937;
-        }
-
-        .divider-text {
-          color: #374151;
-          font-size: 0.8rem;
-        }
-
-        .register-link {
-          text-align: center;
-          color: #4b5563;
-          font-size: 0.875rem;
-        }
-
-        .register-link a {
-          color: #6366f1;
-          text-decoration: none;
-          font-weight: 500;
-        }
-
-        .register-link a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
           .auth-root { grid-template-columns: 1fr; }
@@ -347,17 +315,6 @@ function LoginPage() {
                                 {loading ? 'Signing in...' : 'Sign in →'}
                             </button>
                         </form>
-
-                        <div className="divider">
-                            <div className="divider-line" />
-                            <span className="divider-text">or</span>
-                            <div className="divider-line" />
-                        </div>
-
-                        <p className="register-link">
-                            New here?{' '}
-                            <Link to="/register">Create your account</Link>
-                        </p>
                     </div>
                 </div>
             </div>
